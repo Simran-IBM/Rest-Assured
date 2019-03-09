@@ -43,6 +43,7 @@ public class PostData {
 		// Response response = request.put("http://jsonplaceholder.typicode.com/posts/22");
 		
 		int code = response.getStatusCode();
+		System.out.println("Status Code:"+code);
 		
 	}
 }

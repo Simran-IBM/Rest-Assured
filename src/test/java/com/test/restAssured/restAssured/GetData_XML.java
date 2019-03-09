@@ -15,9 +15,9 @@ public class GetData_XML {
 	                         
 	    given().
 	    when().
-	        get("http://ergast.com/api/f1/2017/circuits").
+	        get("http://www.thomas-bayer.com/sqlrest/INVOICE").
 	    then().
 	        assertThat().
-	        body("MRData.CircuitTable.Circuit[0].Location.Locality", equalTo(" Melbourne"));
+	        body("INVOICEList.INVOICE[0]", equalTo("0"));
 	}
 }

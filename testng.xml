@@ -12,6 +12,9 @@
       <class name="com.test.restAssured.restAssured.PostData"/>
       <class name="com.test.restAssured.restAssured.GetEUData"/>
       <class name="com.test.restAssured.restAssured.GetData"/>
+      <class name="com.tutorial.test.Test1_JSON_GET"/>
+      <class name="com.tutorial.test.Test1_JSON_POST"/>
+      <class name="com.tutorial.test.Test1_XML_GET"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

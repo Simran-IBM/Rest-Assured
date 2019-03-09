@@ -3,7 +3,6 @@ package com.test.restAssured.restAssured;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import static io.restassured.RestAssured.*;
 
 @Listeners(com.test.restAssured.restAssured.Listener.ListenerTest.class)
