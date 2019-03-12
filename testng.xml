@@ -15,6 +15,8 @@
       <class name="com.tutorial.test.Test1_JSON_GET"/>
       <class name="com.tutorial.test.Test1_JSON_POST"/>
       <class name="com.tutorial.test.Test1_XML_GET"/>
+      <class name="com.test.restAssured.restAssured.TestByExcelData"/>
+      <class name="com.test.restAssured.restAssured.PostData_ExcelRead"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

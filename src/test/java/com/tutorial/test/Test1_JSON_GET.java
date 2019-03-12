@@ -103,15 +103,4 @@ public class Test1_JSON_GET {
 		detachRoot("CircuitTable").
 		body("CircuitTable.Circuits[0].Location.locality", is("Melbourne"));
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
