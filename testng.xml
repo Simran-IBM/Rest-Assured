@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test">
+<suite name="API Tests Suite">
+  <test name="API Test">
     <classes>
-      <class name="com.test.restAssured.restAssured.GetData2"/>
-      <class name="com.test.restAssured.restAssured.GetData1"/>
-      <class name="com.test.restAssured.restAssured.GetCallBDD"/>
-      <class name="com.test.restAssured.restAssured.PostData1"/>
-      <class name="com.test.restAssured.restAssured.GetData_XML"/>
-      <class name="com.test.restAssured.restAssured.GetData_Assertion"/>
-      <class name="com.test.restAssured.restAssured.PostData"/>
-      <class name="com.test.restAssured.restAssured.GetEUData"/>
-      <class name="com.test.restAssured.restAssured.GetData"/>
-      <class name="com.tutorial.test.Test1_JSON_GET"/>
-      <class name="com.tutorial.test.Test1_JSON_POST"/>
-      <class name="com.tutorial.test.Test1_XML_GET"/>
-      <class name="com.test.restAssured.restAssured.TestByExcelData"/>
-      <class name="com.test.restAssured.restAssured.PostData_ExcelRead"/>
+    <class name="testAssured.testCases.GET_ErgastCircuits_Test"/>
+      <class name="testAssured.testCases.GET_Typicode_AllUsers"/>
+      <class name="testAssured.testCases.GET_OpenWeather_City"/>
+      <class name="testAssured.testCases.E2E_Typicode_User"/>
+      <class name="testAssured.testCases.GET_EU_Test"/>
+      <class name="testAssured.testCases.GET_ThomasBayer_XML"/>
+      <class name="testAssured.testCases.GET_ExcelData_Test"/>
+      <class name="testAssured.testCases.POST_ExcelData_Test"/>
+      <class name="testAssured.tests.Test1_JSON_GET"/>
+      <class name="testAssured.tests.Test1_XML_GET"/>
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test> 
+</suite> 
