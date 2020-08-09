@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.test.restAssured.restAssured.PostData_ExcelRead">
+      <class name="testAssured.e2e.E2E_WSTest">
         <methods>
-          <include name="testPOST"/>
+          <include name="e2e_PUT"/>
+          <include name="e2e_DELETE"/>
         </methods>
-      </class> <!-- com.test.restAssured.restAssured.PostData_ExcelRead -->
+      </class> <!-- testAssured.e2e.E2E_WSTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

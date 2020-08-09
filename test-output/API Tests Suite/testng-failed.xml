@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [API Tests Suite]">
+  <test name="API Test(failed)">
+    <classes>
+      <class name="testAssured.HTTPMethods.GET_Test">
+        <methods>
+          <include name="getAllBooks"/>
+          <include name="getBookByISBN"/>
+        </methods>
+      </class> <!-- testAssured.HTTPMethods.GET_Test -->
+    </classes>
+  </test> <!-- API Test(failed) -->
+</suite> <!-- Failed suite [API Tests Suite] -->

@@ -6,13 +6,17 @@
     <class name="testAssured.testCases.GET_ErgastCircuits_Test"/>
       <class name="testAssured.testCases.GET_Typicode_AllUsers"/>
       <class name="testAssured.testCases.GET_OpenWeather_City"/>
-      <class name="testAssured.testCases.E2E_Typicode_User"/>
       <class name="testAssured.testCases.GET_EU_Test"/>
       <class name="testAssured.testCases.GET_ThomasBayer_XML"/>
       <class name="testAssured.testCases.GET_ExcelData_Test"/>
       <class name="testAssured.testCases.POST_ExcelData_Test"/>
       <class name="testAssured.tests.Test1_JSON_GET"/>
       <class name="testAssured.tests.Test1_XML_GET"/>
+      <class name="testAssured.HTTPMethods.GET_Test"/>
+      <class name="testAssured.HTTPMethods.POST_Test"/>
+      <class name="testAssured.HTTPMethods.PUT_Test"/>
+      <class name="testAssured.HTTPMethods.DELETE_Test"/>
+      
     </classes>
   </test> 
 </suite> 

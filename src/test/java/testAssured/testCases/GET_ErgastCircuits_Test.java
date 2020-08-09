@@ -23,8 +23,8 @@ public class GET_ErgastCircuits_Test {
 		assertThat().
 		statusCode(200).
 		and().
-		body("MRData.CircuitTable.Circuits.circuitid", hasSize(20)).
+		body("MRData.CircuitTable.Circuits.circuitid", hasSize(20)).  // check response body
 		and().
-		header("content-length", equalTo("4551"));	;
+		header("content-length", equalTo("4551")); // check response header
 	}
 }

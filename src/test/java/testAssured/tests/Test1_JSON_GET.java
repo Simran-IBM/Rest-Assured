@@ -15,7 +15,7 @@ public class Test1_JSON_GET {
 	String host1 = ConfigReader.getValueFromPropertyFile("Ergast_Host");
 	
 	// Checking status code
-	//@Test
+	@Test
 	public void testStatusCode() {
 		given().
 		get(host+"/posts/3").
@@ -23,20 +23,19 @@ public class Test1_JSON_GET {
 		statusCode(200);
 	}
 	
-	//Checking code and print response
+	//Log response
 	
-	//@Test
+	@Test
 	public void testLogging() {
 		given().
 		get(host+"/posts/3").
 		then().
-		statusCode(200).
 		log().all();
 	}
 	
 	//Checking single content using org.hamcrest.Matchers
 	
-	//@Test
+	@Test
 	public void testEqualToFunction() {
 		given().
 		get(host+"/posts/3").
@@ -46,7 +45,7 @@ public class Test1_JSON_GET {
 	
 	
 	//Checking multiple content using org.hamcrest.Matchers
-	//@Test
+	@Test
 	public void testHasItemFunction() {
 		given().
 		get(host+"/posts").
@@ -55,7 +54,7 @@ public class Test1_JSON_GET {
 	}
 	
 	//parameters and headers can be set
-	//@Test
+	@Test
 	public void testParametersandHeaders() {
 		given().
 		param("Key1","Value1").
@@ -69,7 +68,7 @@ public class Test1_JSON_GET {
 	
 	//Using and to increase readability
 	
-	//@Test
+	@Test
 	public void testParametersandHeadersWithAnd() {
 		given().param("Key1","Value1").and().header("HeaderKey1","HeaderValue1").
 		when().get(host+"/posts/3").then().statusCode(200).and().body("id", equalTo(3));
@@ -78,18 +77,19 @@ public class Test1_JSON_GET {
 	//Using is
 	//Not setting root
 	
-	//@Test
+	@Test
 	public void testWithoutRoot() {
 		given().
 		get(host1+"/api/f1/2017/circuits.json").
 		then().
-		body("MRData.CircuitTable.Circuits[0].Location.locality", is("Melbourne"));
+		body("MRData.CircuitTable.Circuits[0].Location.locality", is("Melbourne")).
+		log().all();
 	}
 	
 	//Using is
 	// Setting root
 	
-	//@Test
+	@Test
 	public void testWithRoot() {
 		given().
 		get(host1+"/api/f1/2017/circuits.json").

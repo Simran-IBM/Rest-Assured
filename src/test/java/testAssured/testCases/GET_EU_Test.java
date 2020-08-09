@@ -1,5 +1,9 @@
 package testAssured.testCases;
 
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.lessThan;
+
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -17,10 +21,12 @@ public class GET_EU_Test {
 	@Test()
 	public void getEUTest() {
 		
+		// Without using given(), when(), then()
+		
 		Response response = get(host+"/rest/v1/name/norway");
 		
 		int code=response.getStatusCode();
-		int expectedcode=200;
+		int expectedCode=200;
 		
 		String data=response.asString();
 		long time=response.getTime();
@@ -29,9 +35,17 @@ public class GET_EU_Test {
 		System.out.println("Data is "+data);
 		System.out.println("Response Time: "+time);
 		
-		Assert.assertEquals(code,expectedcode);
+		Assert.assertEquals(code,expectedCode);
 		Assert.assertTrue(time<3000);
 		
+		/*
+		 given().when().get(host+"/rest/v1/name/norway").
+		then().
+		assertThat().
+		statusCode(expectedCode).
+		and().
+		time(lessThan(3000L)); // 100 milliseconds
+		 */
 	}
 }
 

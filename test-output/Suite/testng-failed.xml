@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="com.test.restAssured.restAssured.GetData_XML">
+      <class name="com.test.restAssured.restAssured.TestByExcelData">
         <methods>
-          <include name="checkCountryForFirstCar"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- com.test.restAssured.restAssured.GetData_XML -->
+      </class> <!-- com.test.restAssured.restAssured.TestByExcelData -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

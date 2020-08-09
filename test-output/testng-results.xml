@@ -1,111 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="18" passed="18">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="32264" started-at="2019-03-12T13:11:49Z" finished-at="2019-03-12T13:12:21Z">
+  <suite name="Default suite" duration-ms="3894" started-at="2020-08-09T10:46:39Z" finished-at="2020-08-09T10:46:43Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="32264" started-at="2019-03-12T13:11:49Z" finished-at="2019-03-12T13:12:21Z">
-      <class name="com.tutorial.test.Test1_JSON_POST">
-        <test-method status="PASS" signature="testPostRequest()[pri:0, instance:com.tutorial.test.Test1_JSON_POST@7d9d1a19]" name="testPostRequest" duration-ms="719" started-at="2019-03-12T18:41:59Z" finished-at="2019-03-12T18:42:00Z">
+    <test name="Default test" duration-ms="3894" started-at="2020-08-09T10:46:39Z" finished-at="2020-08-09T10:46:43Z">
+      <class name="testAssured.testCases.GET_Typicode_AllUsers">
+        <test-method status="PASS" signature="getTypicodeAllUsers()[pri:0, instance:testAssured.testCases.GET_Typicode_AllUsers@4ae3c1cd]" name="getTypicodeAllUsers" duration-ms="3843" started-at="2020-08-09T16:16:39Z" finished-at="2020-08-09T16:16:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPostRequest -->
-      </class> <!-- com.tutorial.test.Test1_JSON_POST -->
-      <class name="com.test.restAssured.restAssured.PostData">
-        <test-method status="PASS" signature="testPOST()[pri:0, instance:com.test.restAssured.restAssured.PostData@6d4b1c02]" name="testPOST" duration-ms="534" started-at="2019-03-12T18:41:58Z" finished-at="2019-03-12T18:41:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPOST -->
-      </class> <!-- com.test.restAssured.restAssured.PostData -->
-      <class name="com.tutorial.test.Test1_XML_GET">
-        <test-method status="PASS" signature="testXpath2()[pri:0, instance:com.tutorial.test.Test1_XML_GET@39c0f4a]" name="testXpath2" duration-ms="2208" started-at="2019-03-12T18:42:00Z" finished-at="2019-03-12T18:42:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testXpath2 -->
-      </class> <!-- com.tutorial.test.Test1_XML_GET -->
-      <class name="com.test.restAssured.restAssured.GetEUData">
-        <test-method status="PASS" signature="testResponseCode()[pri:1, instance:com.test.restAssured.restAssured.GetEUData@6093dd95]" name="testResponseCode" duration-ms="660" started-at="2019-03-12T18:42:10Z" finished-at="2019-03-12T18:42:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testResponseCode -->
-        <test-method status="PASS" signature="testResponseBody()[pri:2, instance:com.test.restAssured.restAssured.GetEUData@6093dd95]" name="testResponseBody" duration-ms="1060" started-at="2019-03-12T18:42:18Z" finished-at="2019-03-12T18:42:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testResponseBody -->
-      </class> <!-- com.test.restAssured.restAssured.GetEUData -->
-      <class name="com.test.restAssured.restAssured.GetData_XML">
-        <test-method status="PASS" signature="checkCountryForFirstCar()[pri:0, instance:com.test.restAssured.restAssured.GetData_XML@6a41eaa2]" name="checkCountryForFirstCar" duration-ms="1203" started-at="2019-03-12T18:41:56Z" finished-at="2019-03-12T18:41:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkCountryForFirstCar -->
-      </class> <!-- com.test.restAssured.restAssured.GetData_XML -->
-      <class name="com.test.restAssured.restAssured.GetData1">
-        <test-method status="PASS" signature="testResponseCode()[pri:1, instance:com.test.restAssured.restAssured.GetData1@604ed9f0]" name="testResponseCode" duration-ms="1727" started-at="2019-03-12T18:42:10Z" finished-at="2019-03-12T18:42:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testResponseCode -->
-        <test-method status="PASS" signature="testResponseBody()[pri:2, instance:com.test.restAssured.restAssured.GetData1@604ed9f0]" name="testResponseBody" duration-ms="1795" started-at="2019-03-12T18:42:19Z" finished-at="2019-03-12T18:42:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testResponseBody -->
-      </class> <!-- com.test.restAssured.restAssured.GetData1 -->
-      <class name="com.test.restAssured.restAssured.GetData2">
-        <test-method status="PASS" signature="testResponseCode()[pri:1, instance:com.test.restAssured.restAssured.GetData2@5e3a8624]" name="testResponseCode" duration-ms="1473" started-at="2019-03-12T18:42:08Z" finished-at="2019-03-12T18:42:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testResponseCode -->
-        <test-method status="PASS" signature="testResponseBody()[pri:2, instance:com.test.restAssured.restAssured.GetData2@5e3a8624]" name="testResponseBody" duration-ms="3781" started-at="2019-03-12T18:42:14Z" finished-at="2019-03-12T18:42:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testResponseBody -->
-      </class> <!-- com.test.restAssured.restAssured.GetData2 -->
-      <class name="com.tutorial.test.Test1_JSON_GET">
-        <test-method status="PASS" signature="testDetachRoot()[pri:0, instance:com.tutorial.test.Test1_JSON_GET@4883b407]" name="testDetachRoot" duration-ms="680" started-at="2019-03-12T18:41:58Z" finished-at="2019-03-12T18:41:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testDetachRoot -->
-      </class> <!-- com.tutorial.test.Test1_JSON_GET -->
-      <class name="com.test.restAssured.restAssured.GetCallBDD">
-        <test-method status="PASS" signature="test_numberOfCircuitsfor2017()[pri:0, instance:com.test.restAssured.restAssured.GetCallBDD@6a4f787b]" name="test_numberOfCircuitsfor2017" duration-ms="4479" started-at="2019-03-12T18:41:49Z" finished-at="2019-03-12T18:41:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_numberOfCircuitsfor2017 -->
-      </class> <!-- com.test.restAssured.restAssured.GetCallBDD -->
-      <class name="com.test.restAssured.restAssured.TestByExcelData">
-        <test-method status="PASS" signature="test()[pri:0, instance:com.test.restAssured.restAssured.TestByExcelData@1794d431]" name="test" duration-ms="5410" started-at="2019-03-12T18:42:02Z" finished-at="2019-03-12T18:42:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-      </class> <!-- com.test.restAssured.restAssured.TestByExcelData -->
-      <class name="com.test.restAssured.restAssured.GetData">
-        <test-method status="PASS" signature="testResponseCode()[pri:1, instance:com.test.restAssured.restAssured.GetData@5622fdf]" name="testResponseCode" duration-ms="1604" started-at="2019-03-12T18:42:12Z" finished-at="2019-03-12T18:42:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testResponseCode -->
-        <test-method status="PASS" signature="testResponseBody()[pri:2, instance:com.test.restAssured.restAssured.GetData@5622fdf]" name="testResponseBody" duration-ms="959" started-at="2019-03-12T18:42:20Z" finished-at="2019-03-12T18:42:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testResponseBody -->
-      </class> <!-- com.test.restAssured.restAssured.GetData -->
-      <class name="com.test.restAssured.restAssured.PostData_ExcelRead">
-        <test-method status="PASS" signature="testPOST()[pri:0, instance:com.test.restAssured.restAssured.PostData_ExcelRead@42e26948]" name="testPOST" duration-ms="875" started-at="2019-03-12T18:42:07Z" finished-at="2019-03-12T18:42:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPOST -->
-      </class> <!-- com.test.restAssured.restAssured.PostData_ExcelRead -->
-      <class name="com.test.restAssured.restAssured.GetData_Assertion">
-        <test-method status="PASS" signature="startTest()[pri:0, instance:com.test.restAssured.restAssured.GetData_Assertion@7cd62f43]" name="startTest" duration-ms="1068" started-at="2019-03-12T18:41:57Z" finished-at="2019-03-12T18:41:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTest -->
-      </class> <!-- com.test.restAssured.restAssured.GetData_Assertion -->
-      <class name="com.test.restAssured.restAssured.PostData1">
-        <test-method status="PASS" signature="testPOST()[pri:0, instance:com.test.restAssured.restAssured.PostData1@685cb137]" name="testPOST" duration-ms="1831" started-at="2019-03-12T18:41:54Z" finished-at="2019-03-12T18:41:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPOST -->
-      </class> <!-- com.test.restAssured.restAssured.PostData1 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- getTypicodeAllUsers -->
+      </class> <!-- testAssured.testCases.GET_Typicode_AllUsers -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

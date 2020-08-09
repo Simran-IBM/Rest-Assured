@@ -5,7 +5,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import org.apache.log4j.Logger;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -14,8 +13,6 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
 public class ExcelReader {
-	
-	public static final Logger log = Logger.getLogger(ExcelReader.class.getName());
 	
 	public FileOutputStream fileout = null;
 	public String filepath;
@@ -42,10 +39,8 @@ public class ExcelReader {
 			
 			
 			int rows=workbook.getSheet(sheetName).getLastRowNum();
-			log.info("Number of Rows populated in the Excel:"+rows);
 			
 			columns = workbook.getSheet(sheetName).getRow(rowNumber).getLastCellNum();	
-			log.info("Number of Colums populated in the Excel:"+columns);
 			if(rowNumber<=rows) {
 				
 				for(j=0;j<columns;j++) {
