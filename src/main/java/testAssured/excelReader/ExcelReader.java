@@ -40,7 +40,7 @@ public class ExcelReader {
 			
 			int rows=workbook.getSheet(sheetName).getLastRowNum();
 			
-			columns = workbook.getSheet(sheetName).getRow(rowNumber).getLastCellNum();	
+			columns = workbook.getSheet(sheetName).getRow(rowNumber).getLastCellNum();	// 4
 			if(rowNumber<=rows) {
 				
 				for(j=0;j<columns;j++) {
