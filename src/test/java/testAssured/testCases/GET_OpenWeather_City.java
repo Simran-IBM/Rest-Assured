@@ -32,11 +32,11 @@ public class GET_OpenWeather_City {
 		System.out.println("Data is "+data);
 		System.out.println("Response Time: "+time);
 		
-		String contentType=resp.getContentType();
+		String contentType=resp.getContentType(); // extracting the response content type from the response
 		System.out.println(contentType);
 		
 		Assert.assertEquals(code,expectedCode);
-		Assert.assertTrue(time<3000); // less than 2000 ms
+		Assert.assertTrue(time<3000); // less than 3000 ms
 		Assert.assertEquals(contentType, expectedContentType);
 		
 		

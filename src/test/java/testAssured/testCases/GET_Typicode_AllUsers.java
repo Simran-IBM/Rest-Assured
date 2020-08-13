@@ -22,7 +22,7 @@ public class GET_Typicode_AllUsers {
     public static void getTypicodeAllUsers() {
         Response response = 
         		given().
-                when().get(host+"/users").
+                when().get(host+"/users").  // getting all the user/ users list
                 then().contentType(ContentType.JSON).   // check response Content-Type as JSON
                 log().all().
                 extract().response(); 
@@ -33,7 +33,7 @@ public class GET_Typicode_AllUsers {
         System.out.println("Content-Type is: " + contentType);
         
         // Capture values for different fields from the response body
-        List<String> jsonResponse = response.jsonPath().getList("$");
+        List<String> jsonResponse = response.jsonPath().getList("$"); // $ is indicating the root of the response JSON body
         
         System.out.println("Response is:"+jsonResponse);
         System.out.println("Number of User Records:"+jsonResponse.size());
@@ -44,7 +44,7 @@ public class GET_Typicode_AllUsers {
         System.out.println(usernames0);
         
         Map<String, String> company = response.jsonPath().getMap("company[0]");
-        System.out.println(company.get("name"));
+        System.out.println(company.get("name")); // get to read the value of the key and put to insert the value in the map
         System.out.println(company.get("catchPhrase"));
         System.out.println(company.get("bs"));
         

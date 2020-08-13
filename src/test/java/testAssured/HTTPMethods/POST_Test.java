@@ -1,5 +1,6 @@
 package testAssured.HTTPMethods;
 
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import testAssured.configReader.ConfigReader;
@@ -14,20 +15,24 @@ public class POST_Test {
 	
 	String host = ConfigReader.getValueFromPropertyFile("DummyRest_Host");
 	
-	public HashMap map = new HashMap();  // Crete generic HashMap to accommodate different data types 
+	public HashMap map = new HashMap();  // Create generic HashMap to accommodate different data types 
 	
-	public void postData() {
+	String name = "Simran";
+	int salary = 140000;
+	int age = 30;
+
+    @BeforeTest
+	public void postTestData() { // run this explicitly when we are passing the global parameters inside the map
 		
-		map.put("name", "Simran");
-        map.put("salary",140000);
-        map.put("age",30);
-        
-        System.out.println(map);
+		map.put("name", name);
+        map.put("salary", salary);
+        map.put("age", age);
+       System.out.println(map);
 	}
 	
 	@Test
 	public void testPost() {
-		
+	
 		given()
 		   .contentType("application/json")
 		   .body(map)
@@ -38,10 +43,16 @@ public class POST_Test {
 		.then()
 			.statusCode(200)
 			.log().all()
-			.assertThat().body("message", equalTo("Successfully! Record has been added."))
+			.body("message", equalTo("Successfully! Record has been added."))
+			.body("status", equalTo("success"))
+			.body("data.name", equalTo(name))
+			.body("data.salary", equalTo(salary))
+			.body("data.age", equalTo(age))
 			.header("Content-Type", "application/json");
+			
 				
-		
+		 
 	}
+	
 
 }

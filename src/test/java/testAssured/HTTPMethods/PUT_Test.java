@@ -1,5 +1,6 @@
 package testAssured.HTTPMethods;
 
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import testAssured.configReader.ConfigReader;
@@ -13,8 +14,9 @@ public class PUT_Test {
 	
 	String host = ConfigReader.getValueFromPropertyFile("DummyRest_Host");
 	
-	HashMap map = new HashMap();
+	HashMap map = new HashMap(); // not initialized
 	
+	@BeforeTest
 	public void putData() {
 		
 		map.put("name", "Simran");
@@ -27,6 +29,7 @@ public class PUT_Test {
 		
 		given()
 		      .contentType("application/json")
+		      .header("AuthToken", "xlkjdjfkdlkksfkkdkl")
 		      .body(map)
 		
 		.when()
@@ -35,7 +38,7 @@ public class PUT_Test {
 		
 		.then()
 		      .statusCode(200)
-		      .assertThat().body("message", equalTo("Successfully! Record has been updated."))
+		      .body("message", equalTo("Successfully! Record has been updated."))
 		      .log().all();
 	}
 

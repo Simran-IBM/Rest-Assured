@@ -13,7 +13,8 @@ import testAssured.excelReader.*;;
 public class GET_ExcelData_Test {
 	
 	ExcelReader excel;
-    String filepath=System.getProperty("user.dir") + "\\Resources\\Data\\";
+	String folderpath=ConfigReader.getValueFromPropertyFile("FilePath");
+    String filepath=System.getProperty("user.dir") + folderpath;
     ArrayList<String> data = new ArrayList<String>();
 	String host=ConfigReader.getValueFromPropertyFile("Typicode_Host");
 	
@@ -30,6 +31,7 @@ public class GET_ExcelData_Test {
 		
 	Response response=
 			given().
+			when().
 	        get(host+uri).
 	        then().
 	        statusCode(200).

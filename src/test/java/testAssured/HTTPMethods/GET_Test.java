@@ -16,15 +16,16 @@ public class GET_Test {
 	public void getAllBooks() {
 		
        given()
-         // NA
-        .when()
-          .get(host+"/books")
-        .then()
-          .statusCode(200)
+          // We don't need to set any prerequisite
+       .when()
+          .get(host+"/books")  // http://127.0.0.1:5000/books
+          
+       .then()
+          .statusCode(200).and()
           .statusLine("HTTP/1.0 200 OK")
-          .assertThat().body("books[0].name", equalTo("Test Book 1"))
-          .header("Content-Type", "application/json")
-          .log().all();	
+          .body("books[0].name", equalTo("Test Book 1"))
+          .header("Content-Type", "application/json") // check response header for Content-Type
+          .log().all();	// print the response logs on the console
 	}
 	
 	@Test
@@ -32,12 +33,15 @@ public class GET_Test {
 		
        given()
          // NA
+       
         .when()
-          .get(host+"/books/100")
+          .get(host+"/books/100") // http://127.0.0.1:5000/books
+          
         .then()
           .statusCode(200)
           .statusLine("HTTP/1.0 200 OK")
-          .assertThat().body("name", equalTo("Test Book 1"))
+          .body("name", equalTo("Test Book 1"))
+          .body("price", equalTo(299))
           .header("Content-Type", "application/json")
           .log().all();	
 	}

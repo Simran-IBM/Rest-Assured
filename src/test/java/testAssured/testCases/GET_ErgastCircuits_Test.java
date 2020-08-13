@@ -20,11 +20,12 @@ public class GET_ErgastCircuits_Test {
 		
 		given().when().get(host+"/api/f1/2017/circuits.json").
 		then().
-		assertThat().
+		assertThat(). // readability
 		statusCode(200).
 		and().
-		body("MRData.CircuitTable.Circuits.circuitid", hasSize(20)).  // check response body
+		body("MRData.CircuitTable.Circuits.circuitid", hasSize(20)).  // check response body and asserting that count of circuitids to be 20
 		and().
-		header("content-length", equalTo("4551")); // check response header
+		//body("MRData.total", equalTo("20")).
+		header("content-length", equalTo("4551")).and().log().all(); // check response header
 	}
 }

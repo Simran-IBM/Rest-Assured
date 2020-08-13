@@ -21,8 +21,8 @@ public class GET_ThomasBayer_XML {
 	    when().
 	        get(host+"/sqlrest/INVOICE").
 	    then().
-	        log().all().
+	        log().all(). // printing logs on the console
 	        assertThat().
-	        body("INVOICEList.INVOICE[0]", equalTo("0"));
+	        body("INVOICEList.INVOICE[10]", equalTo("10")); // part of assertion
 	}
 }

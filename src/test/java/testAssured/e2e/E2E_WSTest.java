@@ -42,7 +42,7 @@ public class E2E_WSTest {
 				when().get(host+uri).
 				then().
 				statusCode(200).and().
-				header("Content-Type", contentType).log().all().extract().response();
+				header("Content-Type", contentType).log().all();
 		
 		
 			
@@ -65,9 +65,8 @@ public class E2E_WSTest {
 				when().post(host+uri).
 				then().
 				statusCode(200).and().
-				header("Content-Type", contentType).log().all().extract().response();
-		
-		
+				header("Content-Type", contentType).log().all();
+			
 	}
 	
 	@Test(dependsOnMethods = "e2e_POST")
@@ -85,10 +84,10 @@ public class E2E_WSTest {
 		
 				given().header("Content-Type", contentType).
 				body(request).
-				when().put(host+uri+"/"+isbn).
+				when().put(host+uri+"/"+isbn). // http://localhost:5000/books/103
 				then().
 				statusCode(200).and().
-				header("Content-Type", contentType).log().all().extract().response();
+				header("Content-Type", contentType).log().all();
 		
 	}
 	
@@ -101,7 +100,6 @@ public class E2E_WSTest {
 		data=excel.getCellData(filepath,"testData.xlsx", "e2eData", rowNumber);
 		uri = data.get(1);
 		contentType = data.get(2);
-		request = data.get(3);
 		
 		
 		

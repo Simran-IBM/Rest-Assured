@@ -24,12 +24,12 @@ public class DELETE_Test {
 		  
 		.then()
 		.statusCode(200)
-		.statusLine("HTTP/1.1 200 OK")
+		.statusLine("HTTP/1.1 200 OK").log().all()
 		.extract().response();
 		
-		String responseInStringFormat = response.asString();  // convert JSON to String
+		String responseInStringFormat = response.asString();  // convert Response type variable to String
 		
-		Assert.assertEquals(responseInStringFormat.contains("Successfully! Record has been deleted"), true);
+		Assert.assertEquals(responseInStringFormat.contains("success"), true); // TestNG assertion
 	}
 
 }
